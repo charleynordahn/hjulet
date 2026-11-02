@@ -48,6 +48,7 @@ body {
 	font-size: 1.3rem;
 	font-weight: 700;
 	justify-self: start;
+	background-color: red !important;
 }
 
 li {

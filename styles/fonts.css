@@ -14,4 +14,5 @@
 	font-family: "Cachet";
 	src: url("../fonts/Cachet Std Bold.otf") format("opentype");
 	font-weight: 700;
+	descent-override: 10%;
 }
