@@ -47,8 +47,8 @@ body {
 	font-family: inherit;
 	font-size: 1.3rem;
 	font-weight: 700;
-	justify-self: start;
-	line-height: 1.4 !important;
+	align-self: center;
+	transform: translateY(2px);
 }
 
 li {
