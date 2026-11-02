@@ -33,10 +33,13 @@ button {
 }
 
 body {
-	font-size: 1.2rem;
+	
 	color: var(--white);
 	background-color: var(--purple);
 	font-family: 'Cachet', sans-serif;
+
+	 font-size: 100%;
+ line-height: 1.333%;
 }
 
 /* ========================================
@@ -47,8 +50,9 @@ body {
 	font-family: inherit;
 	font-size: 1.3rem;
 	font-weight: 700;
-	align-self: center;
-	transform: translateY(2px);
+	justify-self: start;
+
+	background-color: red;
 }
 
 li {
