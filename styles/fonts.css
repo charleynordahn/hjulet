@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "Cachet";
+	src: url("../fonts/Cachet Std Book.otf") format("opentype");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Cachet";
+	src: url("../fonts/Cachet Std Medium.otf") format("opentype");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Cachet";
+	src: url("../fonts/Cachet Std Bold.otf") format("opentype");
+	font-weight: 700;
+}

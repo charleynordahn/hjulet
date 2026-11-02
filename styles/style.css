@@ -1,0 +1,195 @@
+/* ========================================
+   CSS VARIABLES
+======================================== */
+
+:root {
+	--blue: #09a4e6;
+	--pink: #e75995;
+	--yellow: #ffaf03;
+	--red: #e9554f;
+	--green: #7eba2f;
+	--orange: #dd682d;
+	--purple: #394171;
+	--dark-grey: #232323;
+	--white: #ffffff;
+	--black: #000000;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+button {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+body {
+	font-size: 1.2rem;
+	color: var(--white);
+	background-color: var(--purple);
+	font-family: 'Cachet', sans-serif;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+.focus-area-title {
+	font-family: inherit;
+	font-size: 1.3rem;
+	font-weight: 700;
+	justify-self: start;
+}
+
+li {
+	font-family: inherit;
+	font-weight: 400;
+	padding: 0.25rem 0;
+}
+
+/* ========================================
+   FOCUS AREA SECTIONS
+======================================== */
+
+#focus-areas-container {
+	display: grid;
+	border-radius: 0.5rem;
+	padding: 0.3rem;
+	gap: 0.5rem;
+}
+
+.focus-area-wrapper {
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+#daily-activities {
+	background-color: var(--blue);
+	border-radius: 0.5rem;
+}
+
+#home-environment {
+	background-color: var(--pink);
+}
+
+#eating-drinking {
+	background-color: var(--yellow);
+}
+
+#physical-symptoms {
+	background-color: var(--red);
+}
+
+#mental-social {
+	background-color: var(--green);
+}
+
+#medication-intake {
+	background-color: var(--orange);
+}
+
+#daily-activities .accordion-container,
+#home-environment .accordion-container,
+#eating-drinking .accordion-container,
+#physical-symptoms .accordion-container,
+#mental-social .accordion-container,
+#medication-intake .accordion-container {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   FOCUS AREA BUTTONS
+======================================== */
+
+.focus-area-button {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	width: 100%;
+	padding: 1.5rem 1rem;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 1.3rem;
+	color: var(--white);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.focus-area-icon {
+	display: grid;
+	place-items: center;
+	padding-right: 0.5rem;
+}
+
+.focus-area-icon svg {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.accordion-icon svg {
+	display: block;
+	width: 30px;
+	height: 30px;
+	transition: transform 0.2s ease;
+}
+
+.focus-area-button.active .accordion-icon svg {
+	transform: rotate(180deg);
+}
+
+/* ========================================
+   ACCORDION
+======================================== */
+
+.accordion-wrapper {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.15s ease-out;
+	font-family: inherit;
+	color: var(--white);
+}
+
+.accordion-container {
+	padding: 1rem 1rem 1rem 0;
+}
+
+.open {
+	max-height: 500px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	gap: 0.5rem;
+	padding: 1.5rem 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.footer a {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+/* ========================================
+   DIVIDERS
+======================================== */
+
+hr {
+	margin: 1rem 0;
+}
