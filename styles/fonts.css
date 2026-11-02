@@ -14,5 +14,6 @@
 	font-family: "Cachet";
 	src: url("../fonts/Cachet Std Bold.otf") format("opentype");
 	font-weight: 700;
-	descent-override: 10%;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
