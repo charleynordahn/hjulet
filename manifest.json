@@ -1,0 +1,12 @@
+{
+	"name": "Hjulet",
+	"short_name": "Hjulet",
+	"description": "Et fagligt redskab til at observere ændringer hos den svækkede ældre.",
+	"lang": "da",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#394171",
+	"theme_color": "#394171"
+}

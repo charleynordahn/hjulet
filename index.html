@@ -7,6 +7,8 @@
 	<meta name="description" content="Your website description">
 	<title>Hjulet</title>
 
+	<link rel="manifest" href="./manifest.json">
+	<meta name="theme-color" content="#394171">
 	<link rel="stylesheet" href="./styles/fonts.css">
 	<link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -37,6 +39,15 @@
 	</main>
 
 	<script type="module" src="./scripts/main.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('./service-worker.js')
+					.then(() => console.log('Hjulet offline support is ready'))
+					.catch(error => console.error('Service worker error:', error));
+			});
+		}
+	</script>
 </body>
 
 </html>
