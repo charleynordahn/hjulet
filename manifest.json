@@ -1,7 +1,7 @@
 {
   "name": "Hjulet",
   "short_name": "Hjulet",
-  "description": "Et fagligt redskab til at observere ændringer hos den svækkede ældre.",
+  "description": "Observere og reagér på ændringer hos den svækkede ældre.",
   "lang": "da",
   "start_url": "./",
   "scope": "./",
@@ -11,10 +11,22 @@
   "theme_color": "#394171",
   "icons": [
     {
-      "src": "./assets/wheel-icon.png",
-      "sizes": "1024x1024",
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

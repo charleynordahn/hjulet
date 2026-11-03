@@ -38,9 +38,9 @@ const renderFocusAreas = () => {
 					${icons[focusArea.icon]}
 				</div>
 
-				<h2 class="focus-area-title">
+				<div class="focus-area-title">
 					${focusArea.title}
-				</h2>
+				</div>
 
 				<span class="accordion-icon">
 					${icons.chevronDown}

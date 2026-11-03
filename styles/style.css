@@ -1,11 +1,11 @@
 /* ========================================
    CSS VARIABLES
 ======================================== */
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 :root {
 	--blue: #09a4e6;
 	--pink: #e75995;
-	--yellow: #ffaf03;
+	--yellow: #e19a00;
 	--red: #e9554f;
 	--green: #7eba2f;
 	--orange: #dd682d;
@@ -32,11 +32,17 @@ button {
 	-webkit-tap-highlight-color: transparent !important;
 }
 
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
 body {
-	font-size: 1.2rem;
+	font-family: 'Quicksand', sans-serif;
 	color: var(--white);
 	background-color: var(--purple);
-	 font-family: 'Quicksand', sans-serif;
 }
 
 /* ========================================
@@ -44,16 +50,13 @@ body {
 ======================================== */
 
 .focus-area-title {
-	font-family: inherit;
-	font-size: 1.3rem;
-	font-weight: 700;
 	justify-self: start;
 }
 
 li {
-	font-family: inherit;
-	font-weight: 400;
-	padding: 0.25rem 0;
+	padding: 0.2rem 0;
+	font-size: 1.05rem;
+	font-weight: 500;
 }
 
 /* ========================================
@@ -62,19 +65,17 @@ li {
 
 #focus-areas-container {
 	display: grid;
-	border-radius: 0.5rem;
 	padding: 0.3rem;
 	gap: 0.5rem;
 }
 
 .focus-area-wrapper {
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 	overflow: hidden;
 }
 
 #daily-activities {
 	background-color: var(--blue);
-	border-radius: 0.5rem;
 }
 
 #home-environment {
@@ -103,7 +104,7 @@ li {
 #physical-symptoms .accordion-container,
 #mental-social .accordion-container,
 #medication-intake .accordion-container {
-	background-color: rgba(0, 0, 0, 0.15);
+	background: linear-gradient(180deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
 
 /* ========================================
@@ -112,13 +113,14 @@ li {
 
 .focus-area-button {
 	display: grid;
+	
 	grid-template-columns: auto 1fr auto;
 	align-items: center;
 	width: 100%;
 	padding: 1.5rem 1rem;
-	font-family: inherit;
-	font-weight: 500;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.02rem;
 	color: var(--white);
 	background-color: transparent;
 	border: none;
@@ -177,13 +179,23 @@ li {
 	grid-template-rows: auto auto auto;
 	gap: 0.5rem;
 	padding: 1.5rem 1rem;
+	font-weight: 700;
+	font-size: 1.2rem;	
+}
+
+.footer-link {
 	font-size: 1rem;
 	font-weight: 400;
 }
 
-.footer a {
+.footer-link a {
 	color: var(--white);
 	text-decoration: underline;
+}
+
+.copyright {
+	font-size: 0.9rem;
+	font-weight: 400;
 }
 
 /* ========================================

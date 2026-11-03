@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="da">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Your website description">
-	<title>Hjulet</title>
+		<meta name="description" content="Observere og reagér på ændringer hos den svækkede ældre.">
 
-	<link rel="manifest" href="./manifest.json">
-	<meta name="theme-color" content="#394171">
-	<link rel="stylesheet" href="./styles/fonts.css">
-	<link rel="stylesheet" href="./styles/style.css">
-</head>
+		<title>Hjulet</title>
 
-<body>
-	<main>
-		<section id="focus-areas-container"></section>
+		<!-- Google Font: Quicksand -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-		<footer class="footer">
-			<h3>Observere og reagere på ændringer hos den svækkede ældre.</h3>
+		<!-- App Icons -->
+		<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
 
-			<hr>
+		<!-- iPhone Home Screen Settings -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Hjulet">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-			<p>
-				Appen er uofficiel og tager udgangspunkt i Drejehjulet fra
-				Geriatrisk Team (Roskilde Kommune og Roskilde Sygehus).
-				Rettighederne til det originale materiale tilhører de
-				respektive rettighedshavere.
-			</p>
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="./manifest.json">
 
-			<p>
-				Læs mere om det originale Drejehjul hos
-				<a href="https://sund-by-net.dk/drejehjul-til-download/" target="_blank" rel="noopener noreferrer">
-					Sund By Netværket
-				</a>
-			</p>
-		</footer>
-	</main>
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#394171">
 
-	<script type="module" src="./scripts/main.js"></script>
-	<script>
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('./service-worker.js')
-					.then(() => console.log('Hjulet offline support is ready'))
-					.catch(error => console.error('Service worker error:', error));
-			});
-		}
-	</script>
-</body>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./styles/fonts.css">
+		<link rel="stylesheet" href="./styles/style.css">
+	</head>
 
+	<body>
+		<main>
+			<section id="focus-areas-container"></section>
+
+			<footer class="footer">
+				<div>
+					Observere og reagér på ændringer hos den svækkede ældre
+				</div>
+
+				<p class="footer-link">
+					Læs mere om det originale Drejehjul hos
+					<a href="https://sund-by-net.dk/drejehjul-til-download/"
+					   target="_blank"
+					   rel="noopener noreferrer">
+						Sund By Netværket
+					</a>.
+				</p>
+
+				<hr>
+
+				<p class="copyright">
+					Appen er uofficiel og tager udgangspunkt i Drejehjulet fra
+					Geriatrisk Team (Roskilde Kommune og Roskilde Sygehus).
+					Rettighederne til det originale materiale tilhører de
+					respektive rettighedshavere.
+				</p>
+			</footer>
+		</main>
+
+		<!-- Main Application -->
+		<script type="module" src="./scripts/main.js"></script>
+
+		<!-- Service Worker -->
+		<script>
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('./service-worker.js')
+						.then(() => console.log('Hjulet offline support is ready'))
+						.catch(error => console.error('Service worker error:', error));
+				});
+			}
+		</script>
+	</body>
 </html>
