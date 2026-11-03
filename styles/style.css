@@ -1,7 +1,6 @@
 /* ========================================
    CSS VARIABLES
 ======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 :root {
 	--blue: #09a4e6;
 	--pink: #e75995;
@@ -55,7 +54,7 @@ body {
 
 li {
 	padding: 0.2rem 0;
-	font-size: 1.05rem;
+	font-size: 1.1rem;
 	font-weight: 500;
 }
 

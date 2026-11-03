@@ -1,18 +1,27 @@
 @font-face {
-	font-family: "Cachet";
-	src: url("../fonts/Cachet Std Book.otf") format("opentype");
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
 	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: "Cachet";
-	src: url("../fonts/Cachet Std Medium.otf") format("opentype");
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
 	font-weight: 500;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: "Cachet";
-	src: url("../fonts/Cachet Std Bold.otf") format("opentype");
-	font-weight: 700;
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
 }
 
+@font-face {
+	font-family: "Quicksand";
+	src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
