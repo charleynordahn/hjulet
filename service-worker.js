@@ -1,18 +1,30 @@
 
-const CACHE_NAME = 'hjulet-v1';
+const CACHE_NAME = 'hjulet-v1.0.0';
 
 const APP_FILES = [
     './',
     './index.html',
     './manifest.json',
+
+    // Stylesheets
     './styles/style.css',
     './styles/fonts.css',
+
+    // Application scripts
     './scripts/main.js',
     './data/data.js',
-    './assets/icons/icon.js',
-    './fonts/Cachet Std Book.otf',
-    './fonts/Cachet Std Medium.otf',
-    './fonts/Cachet Std Bold.otf'
+
+    // App icons
+    './assets/icons/icon-192.png',
+    './assets/icons/icon-512.png',
+    './assets/icons/icon-512-maskable-v2.png',
+    './assets/icons/apple-touch-icon.png',
+
+    // Quicksand fonts
+    './fonts/Quicksand-Regular.ttf',
+    './fonts/Quicksand-Medium.ttf',
+    './fonts/Quicksand-SemiBold.ttf',
+    './fonts/Quicksand-Bold.ttf'
 ];
 
 // Install
