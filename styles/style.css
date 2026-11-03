@@ -2,16 +2,24 @@
    CSS VARIABLES
 ======================================== */
 :root {
-	--blue: #09a4e6;
+	--blue: #008ecb;
 	--pink: #e75995;
 	--yellow: #e19a00;
-	--red: #e9554f;
+	--red: #db4741;
 	--green: #7eba2f;
 	--orange: #dd682d;
 	--purple: #394171;
-	--dark-grey: #232323;
 	--white: #ffffff;
 	--black: #000000;
+
+	/* Dark mode */
+	--blue-dark: #49bcee;
+	--pink-dark: #f47fb1;
+	--yellow-dark: #ffd26f;
+	--red-dark: #ff807b;
+	--green-dark: #b5e179;
+	--orange-dark:#f18a55;
+	--grey-dark: #0f0f0f;
 }
 
 /* ========================================
@@ -44,6 +52,10 @@ body {
 	background-color: var(--purple);
 }
 
+:root[data-theme="dark"] body {
+	background-color: var(--grey-dark);
+}
+
 /* ========================================
    TYPOGRAPHY
 ======================================== */
@@ -55,7 +67,11 @@ body {
 li {
 	padding: 0.2rem 0;
 	font-size: 1.1rem;
-	font-weight: 500;
+	font-weight: 600;
+}
+
+:root[data-theme="dark"] li {
+	color: var(--grey-dark);
 }
 
 /* ========================================
@@ -97,13 +113,30 @@ li {
 	background-color: var(--orange);
 }
 
-#daily-activities .accordion-container,
-#home-environment .accordion-container,
-#eating-drinking .accordion-container,
-#physical-symptoms .accordion-container,
-#mental-social .accordion-container,
-#medication-intake .accordion-container {
-	background: linear-gradient(180deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+/* Dark mode */
+
+:root[data-theme="dark"] #daily-activities {
+	background-color: var(--blue-dark);
+}
+
+:root[data-theme="dark"] #home-environment {
+	background-color: var(--pink-dark);
+}
+
+:root[data-theme="dark"] #eating-drinking {
+	background-color: var(--yellow-dark);
+}
+
+:root[data-theme="dark"] #physical-symptoms {
+	background-color: var(--red-dark);
+}
+
+:root[data-theme="dark"] #mental-social {
+	background-color: var(--green-dark);
+}
+
+:root[data-theme="dark"] #medication-intake {
+	background-color: var(--orange-dark);
 }
 
 /* ========================================
@@ -112,18 +145,21 @@ li {
 
 .focus-area-button {
 	display: grid;
-	
 	grid-template-columns: auto 1fr auto;
 	align-items: center;
 	width: 100%;
 	padding: 1.5rem 1rem;
 	font-size: 1.2rem;
-	font-weight: 600;
+	font-weight: 700;
 	letter-spacing: 0.02rem;
 	color: var(--white);
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+}
+
+:root[data-theme="dark"] .focus-area-button {
+	color: var(--grey-dark);
 }
 
 .focus-area-icon {
@@ -165,6 +201,17 @@ li {
 	padding: 1rem 1rem 1rem 0;
 }
 
+.accordion-wrapper hr {
+	border: none;
+	height: 1px;
+	background-color: var(--white);
+	margin: 0 1rem;
+}
+
+:root[data-theme="dark"] .accordion-wrapper hr {
+	background-color: var(--grey-dark);
+}
+
 .open {
 	max-height: 500px;
 }
@@ -201,6 +248,35 @@ li {
    DIVIDERS
 ======================================== */
 
-hr {
+.footer hr {
 	margin: 1rem 0;
+}
+
+
+.darkmode-toggle-container {
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.darkmode-toggle-container p {
+	font-weight: 700;
+	margin: 0;
+}
+
+#darkmode-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border: none;
+	color: var(--white);
+	cursor: pointer;
+}
+
+#darkmode-toggle svg {
+	width: 40px;
+	height: 40px;
 }

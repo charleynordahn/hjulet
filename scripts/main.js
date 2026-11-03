@@ -48,7 +48,9 @@ const renderFocusAreas = () => {
 			</button>
 
 			<div class="accordion-wrapper">
+				<hr>
 				<div class="accordion-container">
+				
 					<ul>
 						${focusArea.items.map(item => `
 							<li>${item}</li>
@@ -62,4 +64,42 @@ const renderFocusAreas = () => {
 	setupAccordion();
 };
 
+
 renderFocusAreas();
+
+// ========================================
+// DARK MODE
+// ========================================
+
+const darkModeToggle = document.querySelector('#darkmode-toggle');
+
+// Load saved theme (light mode is default)
+const savedTheme = localStorage.getItem('hjulet-theme') || 'light';
+
+document.documentElement.dataset.theme = savedTheme;
+
+// Update toggle icon
+const updateToggleIcon = (theme) => {
+	const isDark = theme === 'dark';
+
+	darkModeToggle.innerHTML = isDark ? icons.toggleRight : icons.toggleLeft;
+	darkModeToggle.setAttribute('aria-pressed', isDark);
+	darkModeToggle.setAttribute(
+		'aria-label',
+		isDark ? 'Skift til light mode' : 'Skift til dark mode'
+	);
+};
+
+// Set initial icon
+updateToggleIcon(savedTheme);
+
+// Toggle theme when clicked
+darkModeToggle.addEventListener('click', () => {
+	const isDark = document.documentElement.dataset.theme !== 'dark';
+	const newTheme = isDark ? 'dark' : 'light';
+
+	document.documentElement.dataset.theme = newTheme;
+	localStorage.setItem('hjulet-theme', newTheme);
+
+	updateToggleIcon(newTheme);
+});
