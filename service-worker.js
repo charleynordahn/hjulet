@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'hjulet-v2';
+const CACHE_NAME = 'hjulet-v1';
 
 const APP_FILES = [
     './',
