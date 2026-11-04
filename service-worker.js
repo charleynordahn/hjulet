@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'drejehjulet-v1.0.0';
+const CACHE_NAME = 'drejehjulet-v1.0.1';
 
 const APP_FILES = [
 	'./',
@@ -13,6 +13,7 @@ const APP_FILES = [
 	// Application scripts
 	'./scripts/main.js',
 	'./data/data.js',
+	'./assets/icons/icon.js',
 
 	// App icons
 	'./assets/icons/icon-192.png',
@@ -60,7 +61,7 @@ self.addEventListener('fetch', event => {
 	if (new URL(event.request.url).origin !== self.location.origin) return;
 
 	event.respondWith(
-		fetch(event.request)
+		fetch(event.request, { cache: 'no-cache' })
 			.then(response => {
 				if (response.ok) {
 					const responseClone = response.clone();
