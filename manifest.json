@@ -1,32 +1,32 @@
 {
-  "name": "Hjulet",
-  "short_name": "Hjulet",
-  "description": "Observere og reagér på ændringer hos den svækkede ældre.",
-  "lang": "da",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#394171",
-  "theme_color": "#394171",
-  "icons": [
-    {
-      "src": "./assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "./assets/icons/icon-512-maskable-v2.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+	"name": "Drejehjulet",
+	"short_name": "Drejehjulet",
+	"description": "Observere og reagér på ændringer hos den svækkede ældre.",
+	"lang": "da",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#394171",
+	"theme_color": "#394171",
+	"icons": [
+		{
+			"src": "./assets/icons/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "./assets/icons/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "./assets/icons/icon-512-maskable-v2.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
 }

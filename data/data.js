@@ -1,4 +1,3 @@
-
 export const focusAreas = [
 	{
 		id: 'daily-activities',
@@ -32,7 +31,7 @@ export const focusAreas = [
 		title: 'Spise/drikke',
 		icon: 'utensils',
 		items: [
-			'Tøjet sidder løsere',
+			'Hænger tøjet',
 			'Appetit',
 			'Væskeindtag',
 			'Køleskab',

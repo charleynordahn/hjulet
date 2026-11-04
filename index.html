@@ -3,10 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<meta name="description" content="Observere og reagér på ændringer hos den svækkede ældre.">
 
-		<title>Hjulet</title>
+		<title>Drejehjulet</title>
 
 		<!-- Google Font: Quicksand -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +16,9 @@
 		<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
 
 		<!-- iPhone Home Screen Settings -->
+		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-title" content="Hjulet">
+		<meta name="apple-mobile-web-app-title" content="Drejehjulet">
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 		<!-- PWA Manifest -->
@@ -33,6 +33,46 @@
 	</head>
 
 	<body>
+		<nav class="navbar">
+			<h1>Drejehjulet</h1>
+			<button class="nav-setting" aria-label="Indstillinger"></button>
+		</nav>
+
+		<div class="nav-menu">
+			<div class="nav-close-container">
+				<h1>Indstillinger</h1>
+				<button class="nav-close" aria-label="Luk menu"></button>
+			</div>
+			
+			<section class="nav-menu-container">
+				<div class="darkmode-toggle-container">
+					<p>Dark mode:</p>
+					<button id="darkmode-toggle"
+						aria-label="Skift til dark mode"
+						aria-pressed="false">
+					</button>
+				</div>
+				<hr>
+				<h3>Drejehjul til download</h3>
+				<p class="link">
+					Læs mere om det originale Drejehjul hos
+					<a href="https://sund-by-net.dk/drejehjul-til-download/"
+					target="_blank"
+					rel="noopener noreferrer">
+						Sund By Netværket
+					</a>.
+				</p>
+				<hr>
+
+				<p class="copyright">
+					Appen er uofficiel og tager udgangspunkt i Drejehjulet fra
+					Geriatrisk Team (Roskilde Kommune og Roskilde Sygehus).
+					<br><br>
+					Appen er udviklet af Charley Nordahn · 2026
+				</p>
+			</section>
+		</div>
+
 		<main>
 			<section id="focus-areas-container"></section>
 		
@@ -40,29 +80,6 @@
 				<div>
 					Observere og reagér på ændringer hos den svækkede ældre.
 				</div>
-
-				<p class="footer-link">
-					Læs mere om det originale Drejehjul hos
-					<a href="https://sund-by-net.dk/drejehjul-til-download/"
-					   target="_blank"
-					   rel="noopener noreferrer">
-						Sund By Netværket
-					</a>.
-				</p>
-
-				<hr>
-
-				<p class="copyright">
-					Appen er uofficiel og tager udgangspunkt i Drejehjulet fra
-					Geriatrisk Team (Roskilde Kommune og Roskilde Sygehus).
-					Rettighederne til det originale materiale tilhører de
-					respektive rettighedshavere.
-				</p>
-				
-				<div class="darkmode-toggle-container">
-					<p>Dark mode:</p> <button id="darkmode-toggle" aria-label="Skift til dark mode" aria-pressed="false">
-				</div>
-			</button>
 			</footer>
 		</main>
 
@@ -74,7 +91,7 @@
 			if ('serviceWorker' in navigator) {
 				window.addEventListener('load', () => {
 					navigator.serviceWorker.register('./service-worker.js')
-						.then(() => console.log('Hjulet offline support is ready'))
+						.then(() => console.log('Drejehjulet offline support is ready'))
 						.catch(error => console.error('Service worker error:', error));
 				});
 			}

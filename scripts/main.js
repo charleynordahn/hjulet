@@ -48,7 +48,7 @@ const renderFocusAreas = () => {
 			</button>
 
 			<div class="accordion-wrapper">
-				<hr>
+			
 				<div class="accordion-container">
 				
 					<ul>
@@ -102,4 +102,26 @@ darkModeToggle.addEventListener('click', () => {
 	localStorage.setItem('hjulet-theme', newTheme);
 
 	updateToggleIcon(newTheme);
+});
+
+// ========================================
+// NAVIGATION MENU
+// ========================================
+
+const navMenu = document.querySelector('.nav-menu');
+const navSetting = document.querySelector('.nav-setting');
+const navClose = document.querySelector('.nav-close');
+
+// Insert navigation icons
+navClose.innerHTML = icons.x;
+navSetting.innerHTML = icons.ellipsisVertical;
+
+// Open menu
+navSetting.addEventListener('click', () => {
+    navMenu.classList.add('open');
+});
+
+// Close menu
+navClose.addEventListener('click', () => {
+    navMenu.classList.remove('open');
 });

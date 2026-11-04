@@ -8,7 +8,8 @@
 	--red: #db4741;
 	--green: #7eba2f;
 	--orange: #dd682d;
-	--purple: #394171;
+	--purple: #2e355f;
+	--dark-purple: #1f2446;
 	--white: #ffffff;
 	--black: #000000;
 
@@ -61,7 +62,7 @@ body {
 ======================================== */
 
 .focus-area-title {
-	justify-self: start;
+	justify-self: flex-start;
 }
 
 li {
@@ -72,6 +73,119 @@ li {
 
 :root[data-theme="dark"] li {
 	color: var(--grey-dark);
+}
+
+main {
+	position: relative;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navbar h1, 
+.nav-close-container h1 {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.navbar button{
+	border: none;
+	background: transparent;
+	color: var(--white);
+}
+
+.nav-menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--purple);
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transform 0.2s ease-in-out, visibility 0.2s;
+}
+
+:root[data-theme="dark"] .nav-menu {
+	background-color: var(--grey-dark);
+}
+
+.link {
+	font-size: 1rem;
+	font-weight: 400;
+	margin-top: 0.5rem;
+}
+
+.link a {
+	color: var(--white);
+	text-decoration: underline;
+}
+
+.nav-menu hr {
+	margin: 1rem 0;
+}
+
+.nav-menu.open {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.nav-menu-container {
+	padding: 0 1rem 1rem 1rem;
+	display: flex;
+    flex-direction: column;
+	height: 100vh;
+}
+
+.nav-close-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--purple);
+	padding: 1rem;
+}
+
+:root[data-theme="dark"] .nav-close-container {
+	background-color: var(--grey-dark);
+}
+
+.nav-close {
+	background: transparent;
+	border: none;
+	color: var(--white);
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.nav-close,
+.nav-setting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-close svg,
+.nav-setting svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+}
+
+.copyright {
+	margin-top: auto;
+	font-size: 0.9rem;
+	font-weight: 400;
 }
 
 /* ========================================
@@ -113,6 +227,24 @@ li {
 	background-color: var(--orange);
 }
 
+#daily-activities .accordion-wrapper,
+#home-environment .accordion-wrapper,
+#eating-drinking .accordion-wrapper,
+#physical-symptoms .accordion-wrapper,
+#mental-social .accordion-wrapper,
+#medication-intake .accordion-wrapper {
+    background-color: rgba(0, 0, 0, 0.17);
+}
+
+:root[data-theme="dark"] #daily-activities .accordion-wrapper,
+:root[data-theme="dark"] #home-environment .accordion-wrapper,
+:root[data-theme="dark"] #eating-drinking .accordion-wrapper,
+:root[data-theme="dark"] #physical-symptoms .accordion-wrapper,
+:root[data-theme="dark"] #mental-social .accordion-wrapper,
+:root[data-theme="dark"] #medication-intake .accordion-wrapper {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Dark mode */
 
 :root[data-theme="dark"] #daily-activities {
@@ -149,7 +281,7 @@ li {
 	align-items: center;
 	width: 100%;
 	padding: 1.5rem 1rem;
-	font-size: 1.2rem;
+	font-size: 1.15rem;
 	font-weight: 700;
 	letter-spacing: 0.02rem;
 	color: var(--white);
@@ -212,7 +344,7 @@ li {
 	background-color: var(--grey-dark);
 }
 
-.open {
+.accordion-wrapper.open.open {
 	max-height: 500px;
 }
 
@@ -221,37 +353,14 @@ li {
 ======================================== */
 
 .footer {
-	display: grid;
-	grid-template-rows: auto auto auto;
-	gap: 0.5rem;
-	padding: 1.5rem 1rem;
+	padding: 1rem;
 	font-weight: 700;
 	font-size: 1.2rem;	
 }
 
-.footer-link {
-	font-size: 1rem;
-	font-weight: 400;
-}
-
-.footer-link a {
-	color: var(--white);
-	text-decoration: underline;
-}
-
-.copyright {
-	font-size: 0.9rem;
-	font-weight: 400;
-}
-
 /* ========================================
-   DIVIDERS
+   DARK MODE TOGGLE
 ======================================== */
-
-.footer hr {
-	margin: 1rem 0;
-}
-
 
 .darkmode-toggle-container {
 	display: flex;
@@ -259,6 +368,7 @@ li {
 	gap: 0.2rem;
 	font-size: 1rem;
 	font-weight: 400;
+	margin-top: 1rem;
 }
 
 .darkmode-toggle-container p {
